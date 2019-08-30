@@ -226,6 +226,16 @@ class Flexible extends Field
         $this->value = $this->resolveGroups($this->groups);
     }
 
+    public function getLayouts(): LayoutsCollection
+    {
+        return $this->layouts;
+    }
+
+    public function maxWidth($maxWidth = 100)
+    {
+        return $this->withMeta(['maxWidth' => $maxWidth]);
+    }
+
     /**
      * Hydrate the given attribute on the model based on the incoming request.
      *

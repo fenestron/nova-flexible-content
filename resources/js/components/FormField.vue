@@ -2,7 +2,7 @@
     <component :is="field.fullWidth ? 'full-width-field' : 'default-field'" :field="field" :errors="errors" full-width-content>
         <template slot="field">
 
-            <div v-if="order.length > 0">
+            <div v-if="order.length > 0" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
                 <form-nova-flexible-content-group
                     v-for="group in orderedGroups"
                     :key="group.key"
